@@ -1,3 +1,74 @@
 body {
   margin: 0;
 }
+
+header {
+  background-color: #000;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  color: #fff;
+  text-align: center;
+  margin: 0; /* Removes the default margin/spacing around the 'h1' element. */
+  padding-top: 20px; /* Pushes text down 20px from top of page. */
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex; /* You want the nav to display in a single row. 
+  This is the default value for 'display: flex' */
+  padding-left: 0; /* Removes the default padding to the left of the ul. */
+  list-style: none; /* Removes the bullet points from the list items. */
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none; /* Removes the underline from link. */
+  margin: 0 20px 0 0; /* Applies a 20px margin to the right of each link,
+  creating a visual gap. */
+}
+
+header nav ul li:last-child a {
+  margin-right: 0;
+  /* Removes the margin to the right of the last anchor
+  tag so that the nav appears centered. */
+}
+
+
+/* Desktop nav bar */
+
+@media all and (min-width: 600px) {
+  header {
+    display: flex; 
+    /* Changes default setting from 'block' to 'flex' */
+    justify-content: space-between;
+    /* Pushes items to far sides of browser, with space b/w them. */
+    padding: 0 30px;
+    /* Adds 0px padding top & bottom, 30px left & right. */ 
+  }
+
+  header h1 {
+    margin: 14px;
+    /* Sets 14px margin above & below the 'h1' and sets 0px margin
+    to the left and right. */
+    padding-top: 0px;
+    /* Removes or sets 0px padding above the 'h1'. */
+  }
+
+  header nav {
+    margin-top: 8px;
+    /* Pushes the nav container down by 8px to be more
+    visually pleasing. */
+  }
+
+  header nav ul li a:hover {
+    color: #bdbdbd;
+    /* When a user hovers the cursor over the anchor tag (link) within
+    the nav list items inside the header, the color turns to light gray. */
+  }
+}
